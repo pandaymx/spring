@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="bookMapper" class="com.ymx.mapper.impl.BookMapperImpl">
+        <!--数组格式-->
+        <property name="array">
+            <array>
+                <value>100</value>
+                <value>100</value>
+                <value>100</value>
+            </array>
+        </property>
+        <property name="list">
+            <list>
+                <value>100</value>
+                <value>100</value>
+                <value>200</value>
+            </list>
+        </property>
+        <property name="set">
+            <set>
+                <value>100</value>
+                <value>200</value>
+                <value>100</value>
+                <value>200</value>
+            </set>
+        </property>
+        <property name="map">
+            <map>
+                <entry key="国家" value="中国"></entry>
+                <entry key="省份" value="河南"></entry>
+                <entry key="所在市" value="郑州"></entry>
+            </map>
+        </property>
+        <property name="properties">
+            <props>
+                <prop key="国家">中国</prop>
+                <prop key="省份">河南</prop>
+                <prop key="所在市">郑州</prop>
+            </props>
+        </property>
+    </bean>
+</beans>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="bookMapper" class="com.ymx.mapper.impl.BookMapperImpl">
+        <!--通过类型注入-->
+        <constructor-arg type="int" value="1"/>
+        <constructor-arg type="java.lang.String" value="鸡哥"/>
+    </bean>
+    <bean id="userMapper" class="com.ymx.mapper.impl.UserMapperImpl">
+        <!--通过位置来解决-->
+        <constructor-arg index="0" value="1"/>
+        <constructor-arg index="1" value="cxk"/>
+    </bean>
+    <!--构造器注入的name识别的是形参的值-->
+    <bean id="bookService" class="com.ymx.service.impl.BookServiceImpl">
+        <constructor-arg name="bookMapper" ref="bookMapper"/>
+        <constructor-arg name="userMapper" ref="userMapper"/>
+    </bean>
+</beans>

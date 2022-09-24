@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+    <!--name来设置别名，通过空格 ; ,进行分割 ，scope确定它是否为单例模式-->
+    <bean id="bookMapper" class="com.ymx.mapper.impl.BookMapperImpl" scope="prototype"/>
+    <bean id="bookService" class="com.ymx.service.impl.BookServiceImpl" name="mapper mapper2,mapper3;mapper4" scope="prototype" >
+        <property name="bookMapper" ref="bookMapper"/>
+    </bean>
+</beans>

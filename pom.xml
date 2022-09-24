@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.ymx</groupId>
+    <artifactId>spring</artifactId>
+    <packaging>pom</packaging>
+    <version>1.0-SNAPSHOT</version>
+    <modules>
+        <module>spring_01_IOC</module>
+        <module>spring_02_DI</module>
+        <module>spring_03_bean</module>
+        <module>spring_04_instance</module>
+        <module>spring_05_lifecycle</module>
+        <module>spring_06_setter</module>
+        <module>spring_07_constructor</module>
+        <module>spring_08_autowire</module>
+        <module>spring_09_collection</module>
+        <module>spring_10_datasource</module>
+        <module>spring_11_annotation_bean</module>
+        <module>spring_12_annotation_bean_manager</module>
+        <module>spring_13_annotation_third_bean_manager</module>
+        <module>spring_14_mybatis</module>
+        <module>spring_15_aop</module>
+        <module>spring_16_aop_advice</module>
+        <module>spring_17_aop_data</module>
+        <module>spring_18_transaction</module>
+    </modules>
+
+
+    <dependencies>
+
+        <!--导入spring的坐标-->
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-context</artifactId>
+            <version>5.3.23</version>
+        </dependency>
+
+        <!--测试工具包-->
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>4.13.2</version>
+            <scope>test</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>1.18.24</version>
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/com.alibaba/druid -->
+        <dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>druid</artifactId>
+            <version>1.2.13-SNSAPSHOT</version>
+        </dependency>
+
+
+    </dependencies>
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    </properties>
+</project>
